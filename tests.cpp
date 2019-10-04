@@ -33,10 +33,23 @@ class SensorTest : public ::testing::Test {
   // Objects declared here can be used by all tests in the test suite for Foo.
 };
 
-// Tests that the Foo::Bar() method does Abc.
-TEST_F(SensorTest, IsAtTargetTemperatureIsTrueWhenZero) {
+// Tests that the sensor is recognised to be at 0 by default
+TEST_F(SensorTest, IsAtTargetTemperatureIsTrueWhenDefault) {
   Sensor f;
   EXPECT_TRUE(f.isAtTargetTemperature(0)) << "Sensor is not at 0";
+}
+//
+// Tests that the sensor is not recognised to be at other numbers.
+TEST_F(SensorTest, IsAtTargetTemperatureIsFalseWhenDefault) {
+  Sensor f;
+  EXPECT_FALSE(f.isAtTargetTemperature(10)) << "Sensor should be at 0";
+}
+
+// Tests that the sensor is still at the target temperature after it's changed.
+TEST_F(SensorTest, IsAtTargetTemperatureIsTrueWhenChanged) {
+  Sensor f;
+  f.setTargetTemperature(69);
+  EXPECT_TRUE(f.isAtTargetTemperature(69)) << "Sensor target change not recognised";
 }
 
 }  // namespace
