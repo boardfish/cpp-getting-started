@@ -52,6 +52,13 @@ TEST_F(SensorTest, IsAtTargetTemperatureIsTrueWhenChanged) {
   EXPECT_TRUE(f.isAtTargetTemperature(69)) << "Sensor target change not recognised";
 }
 
+// Tests that the sensor is not at the old target temperature after it's changed.
+TEST_F(SensorTest, IsAtTargetTemperatureIsFalseWhenChanged) {
+  Sensor f;
+  f.setTargetTemperature(69);
+  EXPECT_FALSE(f.isAtTargetTemperature(0)) << "Sensor target change not recognised";
+}
+
 }  // namespace
 
 int main(int argc, char **argv) {

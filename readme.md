@@ -21,3 +21,7 @@ Some advice sent to me personally by [@ollienye](https://github.com/ollienye)
 ## Testing
 
 You'll probably need to take a lot of hints from [Erik Smistad](https://www.eriksmistad.no/getting-started-with-google-test-on-ubuntu/) in getting Google Test configured. Then it should be a case of running `scripts/run_tests` to build and test.
+
+## Developing
+
+Follow the **Testing** steps, then make sure you've got [reflex](https://github.com/cespare/reflex) installed before using `scripts/watch_tests` while you work! Whenever you save a `.cpp` file, everything will be rebuilt and tested.
