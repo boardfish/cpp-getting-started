@@ -59,6 +59,35 @@ TEST_F(SensorTest, IsAtTargetTemperatureIsFalseWhenChanged) {
   EXPECT_FALSE(f.isAtTargetTemperature(0)) << "Sensor target change not recognised";
 }
 
+// Tests that the light is toggled
+TEST_F(SensorTest, LightIsToggled) {
+  Sensor f;
+  f.toggleLight(0);
+  EXPECT_TRUE(f.lights[0]) << "Light change not recognised";
+}
+
+// Tests that the light is toggled twice
+TEST_F(SensorTest, LightIsToggledTwice) {
+  Sensor f;
+  f.toggleLight(0);
+  f.toggleLight(0);
+  EXPECT_FALSE(f.lights[0]) << "Light change not recognised";
+}
+
+// Tests that for indexes that don't exist, state is unchanged and it's handled
+TEST_F(SensorTest, UnrecognisedLightIsNotToggled) {
+  Sensor f;
+  f.toggleLight(-1);
+  EXPECT_FALSE(f.lights[0]) << "Light change not recognised";
+}
+
+// Tests that for indexes that don't exist, state is unchanged and it's handled
+TEST_F(SensorTest, MaxBorderUnrecognisedLightIsNotToggled) {
+  Sensor f;
+  f.toggleLight(4);
+  EXPECT_FALSE(f.lights[0]) << "Light change not recognised";
+}
+
 }  // namespace
 
 int main(int argc, char **argv) {

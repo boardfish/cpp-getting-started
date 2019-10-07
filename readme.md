@@ -11,6 +11,8 @@ This is the repo I'm using in order to learn C++.
 - [Using headers with class code](https://www.learncpp.com/cpp-tutorial/89-class-code-and-header-files/)
 - [Makefiles](https://stackoverflow.com/questions/2481269/how-to-make-a-simple-c-makefile#2481326)
 - [Makefiles](https://www.cs.swarthmore.edu/~newhall/unixhelp/howto_makefiles.html)
+- [Arrays](https://www.tutorialspoint.com/cplusplus/cpp_arrays.htm)
+- [C++ Array Size](https://stackoverflow.com/a/23044646)
 
 Some advice sent to me personally by [@ollienye](https://github.com/ollienye)
 
