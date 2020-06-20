@@ -1,6 +1,6 @@
 # C++ Getting Started
 
-This is the repo I'm using in order to learn C++.
+This is the repo I used to explore C++ and get my head around it for COM3505 Internet of Things.
 
 ## Bibliography
 
@@ -14,7 +14,7 @@ This is the repo I'm using in order to learn C++.
 - [Arrays](https://www.tutorialspoint.com/cplusplus/cpp_arrays.htm)
 - [C++ Array Size](https://stackoverflow.com/a/23044646)
 
-Some advice sent to me personally by [@ollienye](https://github.com/ollienye)
+Some advice sent to me personally by [@ollienye](https://github.com/ollienye) (verbatim in ollies_notes.md)
 
 ## Running
 
